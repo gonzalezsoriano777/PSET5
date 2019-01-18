@@ -1,5 +1,6 @@
 // Implements a dictionary's functionality
-
+#include <stdio.h>
+#include <cs50.h>
 #include <stdbool.h>
 
 #include "dictionary.h"
