@@ -9,6 +9,13 @@
 bool check(const char *word)
 {
     // TODO
+    int len = strlen(word);
+    char word_vld[len s];
+
+
+
+
+
     return false;
 }
 
