@@ -12,14 +12,17 @@ typedef struct node
 }
     node;
 
+// A pointer to an array of HASHTABLES_SIZE, containing the buckets in which the hash will use
+node* hashtble[HASHTABLE_SIZE];
+
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
     // TODO
-    
+
     // checks to see if the word is valid and that would include the length of the word itself
-    int len = strlen(word); 
-    
+    int len = strlen(word);
+
     return false;
 }
 
