@@ -16,8 +16,10 @@ typedef struct node
 bool check(const char *word)
 {
     // TODO
-    int len = strlen(word); // checks to see if the word is valid and that would include the length
-
+    
+    // checks to see if the word is valid and that would include the length of the word itself
+    int len = strlen(word); 
+    
     return false;
 }
 
