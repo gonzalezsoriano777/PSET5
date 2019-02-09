@@ -5,12 +5,14 @@
 
 #include "dictionary.h"
 
+// Going to be using the Hash method
+
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
 }
-    node;
+     node;
 
 // A pointer to an array of HASHTABLES_SIZE, containing the buckets in which the hash will use
 node* hashtble[HASHTABLE_SIZE];
