@@ -1,4 +1,14 @@
 // Implements a dictionary's functionality
+
+// To Understand the functionality of this Project..
+
+// Load:
+// Check:
+
+// Size:
+// Unload:
+
+
 #include <stdio.h>
 #include <cs50.h>
 #include <stdbool.h>
@@ -7,12 +17,7 @@
 
 // Going to be using the Hash method
 
-typedef struct node
-{
-    char word[LENGTH + 1];
-    struct node *next;
-}
-     node;
+
 
 // A pointer to an array of HASHTABLES_SIZE, containing the buckets in which the hash will use
 node* hashtble[HASHTABLE_SIZE];
