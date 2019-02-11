@@ -2,7 +2,7 @@
 
 // To Understand the functionality of this Project..
 
-// Load:
+// Load: Loads up the dictionary file ( for each word in dictionary text file, store into dict. data structure )
 // Check:
 
 // Size:
