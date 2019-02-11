@@ -19,8 +19,6 @@
 
 
 
-// A pointer to an array of HASHTABLES_SIZE, containing the buckets in which the hash will use
-node* hashtble[HASHTABLE_SIZE];
 
 // Returns true if word is in dictionary else false
 bool check(const char *word)

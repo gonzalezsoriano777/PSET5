@@ -14,8 +14,8 @@
 // (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
 #define LENGTH 45
 
-// # of buckets in a hashtable
-#define HASHTABLE_SIZE 50 // 50 buckets used for the dictionary
+
+
 // Prototypes
 bool check(const char *word);
 bool load(const char *dictionary);
