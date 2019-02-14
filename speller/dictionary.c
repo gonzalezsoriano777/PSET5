@@ -3,30 +3,42 @@
 // To Understand the functionality of this Project..
 
 // Load: Loads up the dictionary file ( for each word in dictionary text file, store into dict. data structure )
-// Check:
 
-// Size:
-// Unload:
+// Check: Checks each and every word inserted, Case-Sensitive..
+/* checks the string with only alphabetical letter and/or astrophes */
 
+// Size: Returns the number of words that would be identical to the word inserted..
+/* If Loaded */
+
+// Unload: Removes Dictionary from Memory
+
+// -----------------------------------------------------
 
 #include <stdio.h>
 #include <cs50.h>
+#include <string.h>
+#include <ctype.h>
 #include <stdbool.h>
 
 #include "dictionary.h"
 
-// Going to be using the Hash method
 
+unsigned int wordCount = 0;
 
+// ------------------------------------------------------
 
 
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    // TODO
+    node *current_node = root;
 
-    // checks to see if the word is valid and that would include the length of the word itself
-    int len = strlen(word);
+    for(int i = 0; len = strlen(word); i < len; i++)
+    {
+        int index
+    }
+
+
 
     return false;
 }

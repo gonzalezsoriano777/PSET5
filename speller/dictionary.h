@@ -16,10 +16,50 @@
 
 
 
+// Going to be using the Trie method.. structering
+typedef struct Node
+{
+    bool is_word;
+    struct node* children[27];
+}
+Node;
+
+// freeing the dictionary file from memory (No Memory Leaks)
+void unloadNode(char c);
+
+// Will be used for the function Check
+int alpha_index(char);
+
+
+
+Node *root;
+Node *move;
+
 // Prototypes
 bool check(const char *word);
+{
+
+}
+
+
 bool load(const char *dictionary);
+{
+
+}
+
+
 unsigned int size(void);
+{
+
+
+
+}
+
 bool unload(void);
+{
+
+}
+
+
 
 #endif // DICTIONARY_H
