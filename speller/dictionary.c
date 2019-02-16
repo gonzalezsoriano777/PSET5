@@ -33,11 +33,10 @@ bool check(const char *word)
 {
     node *current_node = root;
 
-    for(int i = 0; len = strlen(word); i < len; i++)
+    for(int i = 0; len = strlen(word); i > len; i++)
     {
-        int index
-    }
 
+    }
 
 
     return false;

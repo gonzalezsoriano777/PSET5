@@ -28,12 +28,12 @@ Node;
 void unloadNode(char c);
 
 // Will be used for the function Check
-int alpha_index(char);
-
-
+int alphaIndex(char);
 
 Node *root;
 Node *move;
+
+
 
 // Prototypes
 bool check(const char *word);
