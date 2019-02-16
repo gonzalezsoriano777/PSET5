@@ -28,10 +28,12 @@ Node;
 void unloadNode(char c);
 
 // Will be used for the function Check
-int alphaIndex(char);
+int indexChar(char);
+
+void *nullNode(node *);
 
 Node *root;
-Node *move;
+
 
 
 
