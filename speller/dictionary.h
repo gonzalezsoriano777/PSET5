@@ -32,7 +32,12 @@ int indexChar(char);
 
 void *nullNode(node *);
 
+// This is the head of the node
 Node *root;
+
+// Pointer
+Node *move;
+
 
 
 

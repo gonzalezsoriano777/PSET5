@@ -31,12 +31,30 @@ unsigned int wordCount = 0;
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    node *current_node = root;
 
-    for(int i = 0; len = strlen(word); i > len; i++)
+    int incorrect_word = 0;
+    int pos = 0;
+
+     // setting the address of move to Node(head)
+    move = root;
+
+    for(int i = 0; i < strlen(word); i++)
     {
+        // finding the position of each letter
+        pos = indexChar(word[i]);
+
+        if (move -> children[pos] == NULL)
+        {
+            incorrect_word++
+
+            // exit function
+            return false;
+        }
+
 
     }
+
+
 
 
     return false;
