@@ -50,11 +50,16 @@ bool check(const char *word)
             // exit function
             return false;
         }
-
-
+        else
+        {
+            // Next Letter , referred to as the next position of children array
+            move = move -> children[pos];
+        }
     }
 
-
+    // Next case: if true, then word is in dictionary
+    if (move -> word_exists)
+        return true;
 
 
     return false;
@@ -63,8 +68,50 @@ bool check(const char *word)
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
-    // TODO
-    return false;
+    FILE *dict = fopen(dictionary, 'r');
+
+    if (dict == NULL)
+    {
+        printf("Sorry for the inconvenience, dictionary could not be opened\n");
+
+        return false;
+
+    }
+
+    // Keeps index for the current user
+    int position = 0;
+    char letter;
+
+    root = nullNode(move);
+    move = root;
+
+
+    //  Load every word from dictionary
+    while(true)
+    {
+        letter = fgetc(dict);
+
+        pos = indexChar(letter);
+
+        if (letter != '\n')
+        {
+            // indicated the end of file
+            if (feof(dict))
+            {
+
+                // pointer is set to the word
+                move -> word_exists = true;
+
+                fclose(dict);
+
+                return true;
+            }
+
+        }
+
+
+    }
+
 }
 
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
