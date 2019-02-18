@@ -17,12 +17,12 @@
 
 
 // Going to be using the Trie method.. structering
-typedef struct Node
+typedef struct node
 {
     bool is_word;
     struct node* children[27];
 }
-Node;
+node;
 
 // freeing the dictionary file from memory (No Memory Leaks)
 void unloadNode(char c);
@@ -33,10 +33,10 @@ int indexChar(char);
 void *nullNode(node *);
 
 // This is the head of the node
-Node *root;
+node *root;
 
 // Pointer
-Node *move;
+node *move;
 
 
 
