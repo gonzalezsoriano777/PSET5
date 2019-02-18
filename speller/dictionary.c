@@ -102,15 +102,38 @@ bool load(const char *dictionary)
                 // pointer is set to the word
                 move -> word_exists = true;
 
+                // closes dict file which is set as a pointer (beg.)
                 fclose(dict);
 
                 return true;
             }
 
+            // Positioning needs to be between 0 & 26
+            if (pos >=0 && pos <= 26)
+            {
+                if (move -> children[pos] == NULL)
+                {
+                    // Move to a new node
+                    move -> children[pos] == nullNode(move -> children[pos]);
+                }
+
+                // moving the pointe of move towards the next node
+                move = move -> children[pos];
+
+            }
         }
+        else
+        {
+            move -> word_exists = true;
 
+            wordCount++;
 
+            // move back to the head(root) node
+            move = root;
+        }
     }
+
+    // Error Checking
 
 }
 
