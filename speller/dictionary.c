@@ -134,6 +134,19 @@ bool load(const char *dictionary)
     }
 
     // Error Checking
+    if (ferror(dict))
+    {
+        // if there is an error for the word itself close dict. file
+        fclose(dict);
+        printf("There was an error found!\n");
+        return false;
+    }
+
+    // Close file
+    fclose(dict);
+
+    // if no error was found then word is found
+    return true;
 
 }
 
