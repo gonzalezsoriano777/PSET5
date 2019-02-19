@@ -171,48 +171,4 @@ bool unload(void)
 
 }
 
-// This function accpets node pointer
-void unloadNode(node *move)
-{
 
-     for (int i = 0; i < 27; i++)
-     {
-
-         // Pointer set to children
-         if (move -> children[i])
-             unloadNode(move -> children[i]);
-
-     }
-     free(move);
-}
-
-// This will be for letter positioning starting at the index
-int indexChar(char letter)
-{
-    if (letter >= 'a' && letter <= 'z')
-        return letter - 'a';
-    else if (letter >= 'A' && letter <= 'Z')
-        return letter - 'A';
-    else
-        return 26;
-
-}
-
-node *nullNode(node *nodePointer)
-{
-    nodePointer = malloc(sizeof(node));
-
-    // If the pointer is NULL, return NULL
-    if (nodePointer == NULL)
-    return NULL;
-
-    // children node = null
-    for (int i = 0; i < 27; i++)
-        nodePointer -> children[i] = NULL;
-
-    nodePointer -> is_word = false;
-
-    // return the node
-    return nodePointer;
-
-}
