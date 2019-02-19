@@ -38,7 +38,7 @@ node *nullNode(node *);
 node *root;
 
 // Pointer
-node *move;
+node *movee;
 
 
 
@@ -48,28 +48,18 @@ node *move;
 
 // Prototypes
 bool check(const char *word);
-{
-   return false;
-}
+
 
 
 bool load(const char *dictionary);
-{
-    return false;
-}
+
 
 
 unsigned int size(void);
-{
 
-    return false;
-
-}
 
 bool unload(void);
-{
-    return false;
-}
+
 
 
 

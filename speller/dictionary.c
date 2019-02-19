@@ -43,9 +43,9 @@ bool check(const char *word)
         // finding the position of each letter
         pos = indexChar(word[i]);
 
-        if (move -> children[pos] == NULL)
+        if (movee -> children[pos] == NULL)
         {
-            incorrect_word++
+            incorrect_word++;
 
             // exit function
             return false;
@@ -53,12 +53,12 @@ bool check(const char *word)
         else
         {
             // Next Letter , referred to as the next position of children array
-            move = move -> children[pos];
+            movee = movee -> children[pos];
         }
     }
 
     // Next case: if true, then word is in dictionary
-    if (move -> word_exists)
+    if (movee -> is_word)
         return true;
 
 
@@ -68,7 +68,7 @@ bool check(const char *word)
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
-    FILE *dict = fopen(dictionary, 'r');
+    FILE *dict = fopen(dictionary, "r");
 
     if (dict == NULL)
     {
@@ -83,7 +83,7 @@ bool load(const char *dictionary)
     char letter;
 
     root = nullNode(move);
-    move = root;
+    movee = root;
 
 
     //  Load every word from dictionary
@@ -91,7 +91,7 @@ bool load(const char *dictionary)
     {
         letter = fgetc(dict);
 
-        pos = indexChar(letter);
+        position = indexChar(letter);
 
         if (letter != '\n')
         {
@@ -100,7 +100,7 @@ bool load(const char *dictionary)
             {
 
                 // pointer is set to the word
-                move -> is_word = true;
+                movee -> is_word = true;
 
                 // closes dict file which is set as a pointer (beg.)
                 fclose(dict);
@@ -109,27 +109,27 @@ bool load(const char *dictionary)
             }
 
             // Positioning needs to be between 0 & 26
-            if (pos >=0 && pos <= 26)
+            if (position >=0 && position <= 26)
             {
-                if (move -> children[pos] == NULL)
+                if (movee -> children[position] == NULL)
                 {
                     // Move to a new node
-                    move -> children[pos] == nullNode(move -> children[pos]);
+                    movee -> children[position] = nullNode(move -> children[position]);
                 }
 
                 // moving the pointe of move towards the next node
-                move = move -> children[pos];
+                movee = movee -> children[position];
 
             }
         }
         else
         {
-            move -> word_exists = true;
+            movee -> is_word = true;
 
             wordCount++;
 
             // move back to the head(root) node
-            move = root;
+            movee = root;
         }
     }
 
