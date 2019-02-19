@@ -25,12 +25,14 @@ typedef struct node
 node;
 
 // freeing the dictionary file from memory (No Memory Leaks)
-void unloadNode(char c);
+void unloadNode(node *move);
 
 // Will be used for the function Check
 int indexChar(char);
 
-void *nullNode(node *);
+
+
+node *nullNode(node *);
 
 // This is the head of the node
 node *root;
@@ -40,31 +42,33 @@ node *move;
 
 
 
+// ------------------------------------------
+
 
 
 // Prototypes
 bool check(const char *word);
 {
-
+   return false;
 }
 
 
 bool load(const char *dictionary);
 {
-
+    return false;
 }
 
 
 unsigned int size(void);
 {
 
-
+    return false;
 
 }
 
 bool unload(void);
 {
-
+    return false;
 }
 
 

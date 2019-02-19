@@ -100,7 +100,7 @@ bool load(const char *dictionary)
             {
 
                 // pointer is set to the word
-                move -> word_exists = true;
+                move -> is_word = true;
 
                 // closes dict file which is set as a pointer (beg.)
                 fclose(dict);
@@ -153,13 +153,66 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
 unsigned int size(void)
 {
-    // dictionary was loaded = return words
+    // if dictionary was loaded = return word/words
+    if (&load)
+    return wordCount;
+
+    else
+        return 0;
 
 }
 
 // Unloads dictionary from memory, returning true if successful else false
 bool unload(void)
 {
-    // TODO
-    return false;
+   // freeing up the memory in node
+   unloadNode(root);
+   return true;
+
+}
+
+// This function accpets node pointer
+void unloadNode(node *move)
+{
+
+     for (int i = 0; i < 27; i++)
+     {
+
+         // Pointer set to children
+         if (move -> children[i])
+             unloadNode(move -> children[i]);
+
+     }
+     free(move);
+}
+
+// This will be for letter positioning starting at the index
+int indexChar(char letter)
+{
+    if (letter >= 'a' && letter <= 'z')
+        return letter - 'a';
+    else if (letter >= 'A' && letter <= 'Z')
+        return letter - 'A';
+    else
+        return 26;
+
+}
+
+node *nullNode(node *nodePointer)
+{
+    nodePointer = malloc(sizeof(node));
+
+    // If the pointer is NULL, return NULL
+    if (nodePointer == NULL)
+    return NULL;
+
+    // children node = null
+    for (int i = 0; i < 27; i++)
+        nodePointer -> children[i] = NULL;
+
+    nodePointer -> is_word = false;
+
+    // return the node
+    return nodePointer;
+
 }
