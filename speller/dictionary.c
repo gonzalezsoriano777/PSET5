@@ -82,7 +82,7 @@ bool load(const char *dictionary)
     int position = 0;
     char letter;
 
-    root = nullNode(move);
+    root = nullNode(movee);
     movee = root;
 
 
@@ -114,7 +114,7 @@ bool load(const char *dictionary)
                 if (movee -> children[position] == NULL)
                 {
                     // Move to a new node
-                    movee -> children[position] = nullNode(move -> children[position]);
+                    movee -> children[position] = nullNode(movee -> children[position]);
                 }
 
                 // moving the pointe of move towards the next node
