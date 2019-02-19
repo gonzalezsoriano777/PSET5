@@ -35,7 +35,7 @@ bool check(const char *word)
     int incorrect_word = 0;
     int pos = 0;
 
-     // setting the address of move to Node(head)
+    // setting the address of move to Node(head)
     movee = root;
 
     for(int i = 0; i < strlen(word); i++)
