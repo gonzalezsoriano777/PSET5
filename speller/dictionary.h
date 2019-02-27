@@ -34,10 +34,9 @@ int indexChar(char);
 
 node *nullNode(node *);
 
-// This is the head of the node
 node *root;
 
-// Pointer
+
 node *movee;
 
 // ------------------------------------------
